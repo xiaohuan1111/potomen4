@@ -5,12 +5,11 @@ body{  margin:0;
     box-sizing: border-box;
 }
 a {
-    text-decoration: none;
     cursor: pointer;
+    color: #ffffff;
 }
 a:hover{
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.3);
+    color:#ffffff;
 }
 p {
     margin: 0;
@@ -28,3 +27,7 @@ li{
     font-size: 12px;
 }
 
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0;
+}
