@@ -14,7 +14,6 @@ body {
         font-size: 14px;
     }
 }
-
 @media only screen and (min-width: 768px) {
     .wrap{
         position: relative;
@@ -397,6 +396,13 @@ body {
 .footer{
     background-color: #272727;
     border-top: 20px solid #333333;
+    display: block;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 1200px) {
+    .footer{
+        width: 1200px;
+    }
 }
 .footer img{
     border: 0;
@@ -406,6 +412,12 @@ body {
 .footer-widget{
     background-color: #272727;
     overflow: hidden;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 1200px) {
+    .footer-widget{
+        width: 1200px;
+    }
 }
 .footer-left{
     padding-top: 30px;
@@ -598,7 +610,7 @@ a:link{
 }
 @media only screen and (min-width: 768px) {.footer-right-widget .slides li img {
     transition: all 0.5s;
-    }
+}
 }
 .footer-right-widget .slides img{
     width: 100%;
@@ -667,7 +679,6 @@ a:link{
 }
 @media only screen and (min-width: 1020px) {
     .footer-right-author i{
-
         margin-right: 5px;
     }
 }
@@ -789,6 +800,7 @@ a:link{
 .icon-ordinaryjiantou2you:before {
     transform: rotate(270deg);
 }
+
 
 
 
