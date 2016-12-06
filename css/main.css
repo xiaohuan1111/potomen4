@@ -9,39 +9,55 @@ body {
     color: gray;
     font-family: sans-serif;
 }
-@media only screen and (min-width: 1020px) {
-    body{
-        font-size: 14px;
-    }
+.wrap {
+    margin: 0 auto;
 }
-@media only screen and (min-width: 768px) {
-    .wrap{
-        position: relative;
-        box-shadow: 0 9px 0 0 white, 0 -9px 0 0 white, 10px 0 30px 0 rgba(0, 0, 0, 0.15), -10px 0 -30px 0 rgba(0, 0, 0, 0.15);
-    }
-}
+
 @media only screen and (min-width: 1200px) {
     .wrap{
         width: 1200px;
     }
 }
-/*main-header*/
-.wrap {
-    width: 1200px;
-    margin: 0 auto;
+@media (min-width: 1020px) and (max-width: 1199px) {
+    .wrap{
+        width:1000px;
+    }
+    .header-logo .logo{
+        max-width: 210px;
+    }
+    body{
+        font-size: 14px;
+    }
 }
+
+@media (min-width: 768px) and (max-width: 1019px) {
+    .wrap{
+        width:750px;
+    }
+}
+@media (min-width : 481px) and(max-width : 767px) {
+    .wrap {
+        width : 480px;
+    }
+}
+@media (max-width: 480px){
+    .wrap {
+        width : 310px;
+    }
+}
+
+/*main-header*/
+
 #main-header {
     width: 100%;
     height: 112px;
     /*background-color: #f5f5f5;*/
 }
 .header-logo {
-    background-color: yellow;
     float: left;
     padding: 20px 0 10px 30px;
 }
 .header-ad {
-    background-color: red;
     padding: 12px 10px 0 0 ;
     float: right;
 }
@@ -54,8 +70,9 @@ body {
     background-color: #262626;
 }
 .main-nav-list{
+    z-index: 3;
     background-color: #262626;
-    width:1200px;
+    width:100%;
     height:48px;
     box-sizing: border-box;
     text-align: center;
@@ -353,6 +370,7 @@ body {
 }
 /*导航下面的公告 */
 #scroll-notice{
+    width:100%;
     font-size: 12px;
     height:35px;
     background-color: #e5e5e5;
@@ -397,13 +415,6 @@ body {
 .footer{
     background-color: #272727;
     border-top: 20px solid #333333;
-    display: block;
-    margin: 0 auto;
-}
-@media only screen and (min-width: 1200px) {
-    .footer{
-        width: 1200px;
-    }
 }
 .footer img{
     border: 0;
@@ -413,12 +424,6 @@ body {
 .footer-widget{
     background-color: #272727;
     overflow: hidden;
-    margin: 0 auto;
-}
-@media only screen and (min-width: 1200px) {
-    .footer-widget{
-        width: 1200px;
-    }
 }
 .footer-left{
     padding-top: 30px;
@@ -611,7 +616,7 @@ a:link{
 }
 @media only screen and (min-width: 768px) {.footer-right-widget .slides li img {
     transition: all 0.5s;
-}
+    }
 }
 .footer-right-widget .slides img{
     width: 100%;
@@ -680,6 +685,7 @@ a:link{
 }
 @media only screen and (min-width: 1020px) {
     .footer-right-author i{
+
         margin-right: 5px;
     }
 }
