@@ -1,0 +1,9 @@
+/*工具样式*/
+
+/*清除浮动*/
+.clear:after{
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+}

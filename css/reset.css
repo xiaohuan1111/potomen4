@@ -1,0 +1,32 @@
+/*重置样式reset*/
+*{
+    box-sizing: border-box;
+}
+body{  margin:0;
+    font-family: "Microsoft Sans Serif";
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.3);
+}
+p {
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+[class^="icon-"] {
+    font-size: 12px;
+}
+
