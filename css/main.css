@@ -11,13 +11,22 @@ body {
     background-color: #333333;
 
 }
+#cb-contain{
+    position: relative;
+}
 .wrap {
     margin: 0 auto;
 }
- /*自适应*/
+
+/*自适应*/
+
+/*屏幕宽度小于 480px 手机设备*/
 @media only screen and (max-width: 480px){
     .wrap {
         width : 310px;
+    }
+    body #main-header{
+        height:82px;
     }
     #main-header .header-logo{
         text-align:center;
@@ -29,12 +38,26 @@ body {
         height:36px;
     }
 }
+
+
+/*屏幕宽度小于767px 高分辨率的手机和低分辨率的平板*/
+@media only screen and (max-width: 767px){
+     body #main-nav{
+        display: none;
+    }
+    #scroll-notice #nav-btn{
+        display: block;
+    }
+}
+
+
+/*分辨率大于480px 平板或pc*/
 @media only screen and (min-width : 481px){
     .wrap {
         width : 480px;
     }
     body #main-header{
-        height:174px;
+        height:139px;
     }
     #main-header .header-logo{
         text-align:center;
@@ -47,9 +70,13 @@ body {
         margin-top:6px;
     }
 }
+/*分辨率大于768px*/
 @media only screen and (min-width: 768px)  {
     .wrap{
         width:750px;
+    }
+    body #main-header{
+        display: block;
     }
     #main-header .header-logo{
         padding: 20px 0 10px 30px;
@@ -58,12 +85,43 @@ body {
         width: 728px;
     }
     body #main-header{
-        height:290px;
+        height:216px;
     }
+
     .header-ad{
         margin: 6px 20px 10px 0;
     }
+    body #main-nav, body .main-nav-list{
+        height:39px;
+    }
+    body #main-nav .nav-fix{
+        width:750px;
+        height:39px;
+    }
+    #main-nav .main-nav-list{
+        padding-left:10%;
+    }
+    .main-nav-list>li{
+        font-size: 14px;
+        line-height:21px;
+    }
+    .main-nav-list>li>a{
+        padding:9px 7px;
+        line-height:21px;
+        transition: all 0.35s;
+    }
+    #cb-icon-login>a,#cb-icon-serach>a{
+        margin: 9px 7px;
+    }
+    #cb-icon-login>a>i,#cb-icon-serach>a>i{
+        font-size: 17px;
+        line-height: 21px;
+    }
+
 }
+
+
+/*分辨率大于1020px */
 @media only screen and (min-width: 1020px)  {
     .wrap{
         width:1000px;
@@ -71,6 +129,9 @@ body {
     #main-header .header-logo{
         width:230px;
         height: 90px;
+    }
+    body #main-nav{
+        font-size: 15px;
     }
     .header-logo .logo{
         max-width: 230px;
@@ -85,7 +146,36 @@ body {
         width:728px;
         height:90px;
     }
+    body #main-nav,.main-nav-list{
+        height:47px;
+    }
+    body #main-nav .nav-fix{
+        width:1000px;
+        height:42px;
+    }
+    body #main-nav .nav-fix>li>a{
+        padding:10px 8px;
+        font-size: 15px;
+        line-height:22.5px;
+    }
+    body #main-nav .main-nav-list{
+        padding-left: 15%;
+    }
+    .main-nav-list>li>a{
+        padding:12px 10px;
+        transition: all 0.35s;
+    }
+    #cb-icon-login>a,#cb-icon-serach>a{
+        margin: 12px 10px;
+    }
+    #cb-icon-login>a>i,#cb-icon-serach>a>i{
+        font-size: 22px;
+        line-height: 22.5px;
+    }
 }
+
+
+/*分辨率大于1200px*/
 @media only screen and (min-width: 1200px) {
     .wrap{
         width: 1200px;
@@ -101,6 +191,36 @@ body {
         width:728px;
         height:90px;
 
+    }
+    body #main-nav{
+        height:48px;
+     }
+    body #main-nav .main-nav-list{
+        height:48px;
+        padding-left:18%;
+    }
+    body #main-nav .nav-fix{
+        width:1200px;
+        height:44px;
+    }
+    body #main-nav .nav-fix>li>a{
+        padding:10px 12px;
+        font-size: 16px;
+        line-height:24px;
+    }
+
+    .main-nav-list>li>a{
+        padding:12px 15px;
+        transition: all 0.35s;
+        font-size: 16px;
+        line-height:24px;
+    }
+    #cb-icon-login>a,#cb-icon-serach>a{
+        margin: 12px 15px;
+    }
+    #cb-icon-login>a>i,#cb-icon-serach>a>i{
+        font-size: 24px;
+        line-height: 24px;
     }
 }
 
@@ -119,71 +239,58 @@ body {
 }
 
 .header-ad {
-    /*margin:0 10px 0 0 ;*/
     padding: 0 10px;
     float: right;
 }
 /*main-nav*/
 #main-nav {
+    display: block;
     color: #fafafa;
     position: relative;
     width: 100%;
-    height: 48px;
     background-color: #262626;
 }
 .main-nav-list{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     z-index: 3;
     background-color: #262626;
     width:100%;
-    height:48px;
-    box-sizing: border-box;
-    text-align: center;
-    transition: 1s;
+    height:47px;
 }
 #main-nav .nav-fix{
     position: fixed;
     top:0;
 }
-#main-nav .nav-fix>li>a{
-    margin: 12px 12px;
-}
 .main-nav-list>li {
     float: left;
-    font-size: 14px;
     font-weight: 200;
     letter-spacing: 2px;
 }
 .main-nav-list .cb-icons {
     float: right;
 }
-.cb-icons ul{
-    font-size: 14px;
-    font-weight: 200;
-    letter-spacing: 2px;
-}
-.cb-icon-login{
+
+#cb-icon-login{
     float: right;
 }
-.cb-icon-login>a,.cb-icon-serach>a{
+#cb-icon-login>a,#cb-icon-serach>a{
     display: block;
-    font-size: 24px;
-    line-height: 24px;
-    margin: 12px 15px;
     color: rgb(249, 249, 249);
 }
-.cb-icon-login>a:hover{
+
+#cb-icon-login>a:hover{
     text-decoration: none;
 }
-.cb-icon-serach>a:hover{
+#cb-icon-serach>a:hover{
     text-decoration: none;;
 }
-.cb-icon-serach{
+#cb-icon-serach{
     float: right;
 }
 .main-nav-list>li>a {
     display: block;
-    line-height: 23px;
-    margin: 12px 15px;
     color: rgb(249, 249, 249);
 }
 .main-nav-list>li>a:hover {
@@ -192,16 +299,23 @@ body {
 
 
 /*导航栏设置*/
+
 /*首页 橘色*/
 #menu-item-301703:hover{
     background-color: #eb9812;
 }
-
+#menu-item-301703.active{
+    background-color: #eb9812;
+}
 .cb-sub-menu>li:hover{
     background-color: #333333;
 }
+
 /*话题 紫色*/
 #menu-item-301702:hover{
+    background-color: #634582;
+}
+#menu-item-301702.active{
     background-color: #634582;
 }
 #menu-item-301702 .cb-sub-menu{
@@ -213,8 +327,12 @@ body {
 #menu-item-301702 .cb-mask{
     background-color: #634582;
 }
+
 /*影廊 粉色*/
 #menu-item-301699:hover{
+    background-color: #e4406e;
+}
+#menu-item-301699.active{
     background-color: #e4406e;
 }
 #menu-item-301699  .cb-sub-menu{
@@ -231,6 +349,9 @@ body {
 #menu-item-301700:hover{
     background-color: #e9cc20;
 }
+#menu-item-301700.active{
+    background-color: #e9cc20;
+}
 #menu-item-301700  .cb-sub-menu{
     background-color: #e9cc20;
 }
@@ -243,6 +364,9 @@ body {
 
 /*装备 蓝色*/
 #menu-item-301701:hover{
+    background-color: #689FCE;
+}
+#menu-item-301701.active{
     background-color: #689FCE;
 }
 #menu-item-301701 .cb-sub-menu{
@@ -259,18 +383,31 @@ body {
 #menu-item-315013:hover{
     background-color: #eb9812;
 }
+#menu-item-315013.active{
+    background-color: #eb9812;
+}
+
 /*订阅*/
 #menu-item-325603:hover{
     background-color: #eb9812;
 }
+#menu-item-325603.active{
+    background-color: #eb9812;
+}
+
 /*商店*/
 #menu-item-432692:hover{
     background-color: #eb9812;
 }
-
+#menu-item-432692.active{
+    background-color: #eb9812;
+}
 
 /*一图 橙色*/
 #menu-item-440794:hover{
+    background-color: #eb9812;
+}
+#menu-item-440794.active{
     background-color: #eb9812;
 }
 #menu-item-440794 .cb-sub-menu{
@@ -286,7 +423,7 @@ body {
 .cb-big-menu{
     position: absolute;
     left:0;
-    top:48px;
+    top:47px;
     display: none;
     width: 100%;
     background-color: #2d2d2d;
@@ -430,24 +567,26 @@ body {
     float: left;
     font-size: 12px;
 }
+
 /*导航下面的公告 */
 #scroll-notice{
     width:100%;
     font-size: 12px;
     height:35px;
-    background-color: #e5e5e5;
+    /*background-color: #e5e5e5;*/
 }
 #notice-tit{
     float: left;
     text-align: center;
     color: #808080;
-    width:150px;
     height:35px;
+    text-align: left;
+    padding:0 10px;
 }
 #notice-con{
     position:relative;
     float: left;
-    width:600px;
+    width:60%;
     height:35px;
     overflow: hidden;
 }
@@ -466,6 +605,12 @@ body {
 }
 #notice-box li a{
     color:#cccccc;
+}
+#nav-btn{
+    float: right;
+    width:48px;
+    height:35px;
+    display: none;
 }
 /*首页主要内容*/
 #cb-content{

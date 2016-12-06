@@ -67,7 +67,7 @@ $(document).ready(function () {
     });
 
     $(".main-nav-list>li").click(function () {
-
+        $(this).addClass("active").siblings("li").removeClass("active");
     });
 
     //cb-article 特色cb-featured 最近 中的图片鼠标移入有涂层效果 用鼠标移入降低图片透明度显示背景颜色实现
@@ -93,9 +93,9 @@ $(document).ready(function () {
     var len = $("#notice-con>ul>li").length;
     var timer = null;
     var $boxinUl = $("#notice-con>ul");
-    //在ul的最后创建一个伪li:first 用于最后个li与第一个li之间的过渡
+        //在ul的最后创建一个伪li:first 用于最后个li与第一个li之间的过渡
     $("#notice-con>ul li:first").clone().appendTo("#notice-con>ul");
-    //设置定时器 timer li自动轮换 鼠标移入是清除定时器
+        //设置定时器 timer li自动轮换 鼠标移入是清除定时器
     timer = setInterval(function () {
         up();
     }, 2000);
@@ -108,7 +108,7 @@ $(document).ready(function () {
             up();
         }, 2000)
     });
-    //函数up实现移动ul 滚动显示li的功能
+        //函数up实现移动ul 滚动显示li的功能
     function up() {
         if (n < len - 1) {
             n++;
@@ -123,8 +123,11 @@ $(document).ready(function () {
 
     //导航栏定位方式切换
     $(window).scroll(function () {
+        var width = document.body.clientWidth;
+        //alert(width);
+        var navFlag =  width > 1020 ? 112:216;
         var  $nav = $(".main-nav-list");
-        if( $(window).scrollTop() >= 112){
+        if( $(window).scrollTop() >= navFlag){
             $nav.addClass("nav-fix");
         }else{
             $nav.removeClass("nav-fix");
