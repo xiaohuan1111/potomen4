@@ -9,10 +9,12 @@ body {
     color: gray;
     font-family: sans-serif;
     background-color: #333333;
+
 }
 .wrap {
     margin: 0 auto;
 }
+ /*自适应*/
 
 @media only screen and (min-width: 1200px) {
     .wrap{
