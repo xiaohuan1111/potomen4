@@ -1,7 +1,5 @@
 /*重置样式reset*/
-*{
-    box-sizing: border-box;
-}
+
 body{  margin:0;
     font-family: "Microsoft Sans Serif";
     box-sizing: border-box;
