@@ -80,13 +80,24 @@ $(document).ready(function () {
 
 
     //导航栏旁边的列表图片鼠标移入添加紫色涂层
-    $(".cb-mask").hover(function () {
+    $(".cb-article").hover(function () {
         $(this).children().children("img").css("opacity", ".5");
     }, function () {
         $(this).children().children("img").css("opacity", "1");
-    })
-
-
+    });
+    $(".cb-recent .cb-mask").hover(function () {
+        $(this).children().children("img").css("opacity", ".5");
+    }, function () {
+        $(this).children().children("img").css("opacity", "1");
+    });
+    
+    //首页图片鼠标移入变大
+    $(".cb-link").hover(function () {
+        $(this).siblings(".cb-grid-img").find("img").css({"transform": "scale(1.1)", "transition": "1s", "opacity": ".9"});
+    },function () {
+        $(this).siblings(".cb-grid-img").find("img").css({"transform": "scale(1)", "transition": "1s", "opacity": "1"});
+    });
+    
     //导航栏下的notice栏滚动列表
 
     var n = 0;
