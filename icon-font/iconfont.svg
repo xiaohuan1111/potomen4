@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Wed Nov 30 10:16:15 2016
+Created by FontForge 20120731 at Tue Dec  6 22:06:51 2016
  By admin
 </metadata>
 <defs>
@@ -16,10 +16,10 @@ Created by FontForge 20120731 at Wed Nov 30 10:16:15 2016
     ascent="896"
     descent="-128"
     x-height="792"
-    bbox="32 -128 992 896"
+    bbox="15 -128 1009 896"
     underline-thickness="0"
     underline-position="0"
-    unicode-range="U+0078-E66E"
+    unicode-range="U+0078-E6B3"
   />
 <missing-glyph 
  />
@@ -39,6 +39,9 @@ t9.5 -10.5t21.5 -4h37h67h81h80h64h36q23 0 34 12t2 38q-5 13 -9.5 30.5t-9.5 34.5q-
 d="M678 41l314 259l-314 259v-169h-646v-180h646v-169z" />
     <glyph glyph-name="add" unicode="&#xe600;" horiz-adv-x="1025" 
 d="M440 641q-16 0 -27 -11t-11 -27v-193h-193q-16 0 -27 -11t-11 -27v-144q0 -16 11 -27t27 -11h193v-193q0 -16 11 -27t27 -11h144q16 0 27 11t11 27v193h193q16 0 27 11t11 27v144q0 16 -11 27t-27 11h-193v193q0 16 -11 27t-27 11h-144z" />
+    <glyph glyph-name="zhedie" unicode="&#xe6b3;" 
+d="M947 315h-870q-26 0 -44 20t-18 49t18 49t44 20h870q26 0 44 -20t18 -49t-18 -49t-44 -20zM947 660h-870q-26 0 -44 20.5t-18 49t18 48.5t44 20h870q26 0 44 -20t18 -48.5t-18 -49t-44 -20.5zM77 108h870q26 0 44 -20.5t18 -49t-18 -48.5t-44 -20h-870q-26 0 -44 20
+t-18 48.5t18 49t44 20.5z" />
     <glyph glyph-name="iconsousuo" unicode="&#xe61d;" 
 d="M934 -38q-24 -24 -58 -24t-63 24l-147 147q-107 -64 -212 -64q-106 0 -196 53.5t-142 144.5t-52 198.5t52 197t141.5 141.5t196.5 52t197 -52t142 -141.5t52 -196.5q0 -105 -64 -212l147 -147q28 -28 29.5 -63t-23.5 -58zM454 717q-115 0 -198 -83.5t-83 -198.5t83 -198
 t198.5 -83t198.5 83t83 198q0 120 -81 201t-201 81z" />
