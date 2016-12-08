@@ -18,6 +18,20 @@ $(document).ready(function () {
     });
 
 
+    //首页轮播图 cb-slider-a
+    var myslide = 1;
+    $(".flex-prev").click(function () {
+        var speed = 1140;
+        $(".cb-slider-a .slide").animate({"left":-myslide*1140+"px"},1000,function(){
+            myslide++;
+            if(myslide == 3){
+                $(".cb-slider-a .slide").css("left",0);
+                myslide = 1;
+            }
+        });
+    })
+    
+
 
     //导航栏选项卡切换
     $(".main-nav-list>li").hover(function () {
@@ -46,6 +60,7 @@ $(document).ready(function () {
     }, function () {
         $(this).children().children("img").css("opacity", "1");
     });
+
     $(".cb-recent .cb-mask").hover(function () {
         $(this).children().children("img").css("opacity", ".5");
     }, function () {
@@ -58,6 +73,7 @@ $(document).ready(function () {
     },function () {
         $(this).siblings(".cb-grid-img").find("img").css({"transform": "scale(1)", "transition": "1s", "opacity": "1"});
     });
+
     
     //导航栏下的notice栏滚动列表
 
