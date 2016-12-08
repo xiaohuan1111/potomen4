@@ -38,13 +38,26 @@ body {
         height:36px;
     }
     #scroll-notice #nav-btn{
-        width:20px;
+        width:30px;
         height:35px;
+        float: right;
+        text-align: center;
+    }
+    #scroll-notice #notice-con{
+        width:160px;
+        overflow: hidden;
+    }
+    #scroll-notice #nav-btn i{
+        /*display: block;*/
+        /*widht:35px;*/
+        /*height:35px;*/
+        /*text-align: center;*/
+        font-size: 10px;
     }
     #scroll-notice #notice-tit{
         font-size: 11px;
         width:96px;
-        padding:0;
+        paddin-left:4px;
     }
     #notice-con #notice-box{
         width:169px;
@@ -113,7 +126,7 @@ body {
         display: block;
     }
     #main-header .header-logo{
-        padding: 20px 0 10px 30px;
+        padding: 20px 0 10px 20px;
     }
     #main-header .header-ad .head-img{
         width: 728px;
@@ -173,9 +186,13 @@ body {
         width:100%;
     }
     .cb-recent .cb-meta{
-
+        padding:0 0 0 90px;
     }
-
+    .cb-big-menu .cb-recent .cb-meta h2{
+        letter-spacing: .5px;
+        font-size: 13px;
+        line-height:16px;
+    }
 }
 
 
@@ -195,7 +212,7 @@ body {
         font-size: 15px;
     }
     .header-logo .logo{
-        max-width: 230px;
+        max-width: 210px;
     }
     body{
         font-size: 14px;
@@ -220,7 +237,7 @@ body {
         line-height:22.5px;
     }
     body #main-nav .main-nav-list{
-        padding-left: 15%;
+        padding-left: 18%;
     }
     .main-nav-list>li>a{
         padding:12px 10px;
@@ -262,9 +279,13 @@ body {
         display: block;
     }
     .cb-recent .cb-meta{
-        padding: 0 0 0 90px;
+        padding: 0 0 0 100px;
     }
-
+    .cb-big-menu .cb-recent .cb-meta h2{
+        letter-spacing: 1px;
+        font-size: 14px;
+        line-height:21px;
+    }
 }
 
 
