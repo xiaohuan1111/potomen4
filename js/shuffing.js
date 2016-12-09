@@ -18,21 +18,6 @@ $(document).ready(function () {
     });
 
 
-    //首页轮播图 cb-slider-a
-    var myslide = 1;
-    $(".flex-prev").click(function () {
-        var speed = 1140;
-        $(".cb-slider-a .slide").animate({"left":-myslide*1140+"px"},1000,function(){
-            myslide++;
-            if(myslide == 3){
-                $(".cb-slider-a .slide").css("left",0);
-                myslide = 1;
-            }
-        });
-    })
-    
-
-
     //导航栏选项卡切换
     $(".main-nav-list>li").hover(function () {
         $(".main-nav-list>li").children(".cb-big-menu").hide();
@@ -73,46 +58,50 @@ $(document).ready(function () {
     },function () {
         $(this).siblings(".cb-grid-img").find("img").css({"transform": "scale(1)", "transition": "1s", "opacity": "1"});
     });
+    //首页轮播中的图片变大
+    $(".slide>li").hover(function () {
+        $(this).children("a").children("img").css({"transform": "scale(1.1)", "transition": "1s", "opacity": ".9"});
+    },function () {
+        $(this).children("a").children("img").css({"transform": "scale(1)", "transition": "1s", "opacity": "1"});
+    });
 
     
     //导航栏下的notice栏滚动列表
-
-    var n = 0;
-    var len = $("#notice-con>ul>li").length;
-    var timer = null;
+    var noticeN = 0;
+    var noticeLen = $("#notice-con>ul>li").length;
+    var noticeTimer = null;
     var $boxinUl = $("#notice-con>ul");
         //在ul的最后创建一个伪li:first 用于最后个li与第一个li之间的过渡
     $("#notice-con>ul li:first").clone().appendTo("#notice-con>ul");
         //设置定时器 timer li自动轮换 鼠标移入是清除定时器
-    timer = setInterval(function () {
+    noticeTimer = setInterval(function () {
         up();
     }, 2000);
 
     $("#notice-con").mouseenter(function () {
-        clearInterval(timer);
+        clearInterval(noticeTimer);
     });
     $("#notice-con").mouseleave(function () {
-        timer = setInterval(function () {
+        noticeTimer = setInterval(function () {
             up();
         }, 2000)
     });
         //函数up实现移动ul 滚动显示li的功能
     function up() {
-        if (n < len - 1) {
-            n++;
-            $boxinUl.animate({"top": -n * 35}, 1000)
+        if (noticeN < noticeLen - 1) {
+            noticeN++;
+            $boxinUl.animate({"top": -noticeN * 35}, 1000)
         } else {
-            $boxinUl.animate({"top": -len * 35}, 1000, function () {
+            $boxinUl.animate({"top": -noticeLen * 35}, 1000, function () {
                 $boxinUl.css("top", 0);
-                n = 0;
+                noticeN = 0;
             });
         }
     }
 
     //导航栏定位方式切换
+    var width = document.body.clientWidth;
     $(window).scroll(function () {
-        var width = document.body.clientWidth;
-        //alert(width);
         var navFlag =  width > 1020 ? 112:216;
         var  $nav = $(".main-nav-list");
         if( $(window).scrollTop() >= navFlag){
@@ -129,6 +118,55 @@ $(document).ready(function () {
     })
     $(".side-nav-close").click(function () {
         $("#cb-outer-container").animate({"left":0},100);
+    })
+
+    //首页轮播图cb-slide-a
+    var myslide = 0;
+    var myspeed = 1140;
+    var mySlideTimer = null;
+    var $cbSlideA = $(".cb-slider-a .slide");
+    var doslide3 = function(){
+        myslide++;
+        if(myslide == 3){
+            $cbSlideA.animate({"left":0},1000);
+            myslide = 0;
+        }
+        $cbSlideA.animate({"left":-myslide*myspeed+"px"},1000);
+
+    };
+    var doslide3s = function(){
+        if(myslide == 0){
+            myslide = 3;
+            $cbSlideA.animate({"left":-(myslide-1)*myspeed+"px"},1000,function(){
+                myslide--;
+            });
+        }else{
+            $cbSlideA.animate({"left":-(myslide-1)*myspeed+"px"},1000);
+            myslide--;
+        };
+
+    };
+
+    $(".flex-prev").click(function () {
+        if(!$cbSlideA.is(":animated")){
+            doslide3();
+        }
+    });
+    $(".flex-next").click(function () {
+        if(!$cbSlideA.is(":animated")){
+            doslide3s();
+        }
+    })
+    //首页轮播图定时器
+    mySlideTimer = setInterval(function () {
+        doslide3();
+    },4000);
+    $(".flexslider-1-fw").hover(function () {
+        clearInterval(mySlideTimer);
+    },function () {
+        mySlideTimer = setInterval(function () {
+            doslide3();
+        },4000);
     })
 });
 
