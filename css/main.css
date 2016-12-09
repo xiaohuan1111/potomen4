@@ -83,6 +83,10 @@ body {
     .cb-recent .cb-mask{
         display: none;
     }
+    /*分辨率小于1020px时 导航栏下拉框中的文章列表图片隐藏*/
+    .cb-recent .cb-meta{
+        padding:0;
+    }
     #main-nav .cb-featured .cb-meta .cb-byline{
         display: none;
     }
@@ -185,9 +189,7 @@ body {
         z-index: 16;
         width:100%;
     }
-    .cb-recent .cb-meta{
-        padding:0 0 0 90px;
-    }
+
     .cb-big-menu .cb-recent .cb-meta h2{
         letter-spacing: .5px;
         font-size: 13px;
@@ -279,7 +281,7 @@ body {
         display: block;
     }
     .cb-recent .cb-meta{
-        padding: 0 0 0 100px;
+        padding: 0 0 0 90px;
     }
     .cb-big-menu .cb-recent .cb-meta h2{
         letter-spacing: 1px;
@@ -547,25 +549,65 @@ body {
 #menu-item-432692.active{
     background-color: #eb9812;
 }
-
 #menu-item-432692 .cb-articles{
     width:100%;
 }
+@media only screen and (max-width:1020px){
+
+}
+@media (min-width :767px) and (max-width: 1020px){
+    #menu-item-432692 .cb-featured{
+        width:50%;
+        /*padding:0 50px;*/
+        /*text-align: center;*/
+    }
+    #menu-item-432692 .cb-featured .cb-mask{
+        /*width:100%;*/
+        text-align: center;
+    }
+    #menu-item-432692 .cb-recent.cb-recent-fw{
+        width:50%;
+    }
+
+}
+
+@media (min-width :1019px) and (max-width: 1199px){
+    #menu-item-432692 .cb-featured{
+    width:470px;
+    }
+    #menu-item-432692 .cb-featured .cb-mask{
+        widht:410px;
+        height:205px;
+    }
+    #menu-item-432692 .cb-recent.cb-recent-fw{
+      width:530px;
+    }
+}
+@media only screen and (min-width: 1200px){
+    #menu-item-432692 .cb-featured{
+        width:540px;
+    }
+    #menu-item-432692 .cb-recent{
+        width:660px;
+    }
+    #menu-item-432692 .cb-featured .cb-mask{
+        widht:480px;
+        height:240px;
+    }
+}
+
+
 #menu-item-432692 .cb-featured{
     float: left;
-    width:540px;
 }
 #menu-item-432692 .cb-recent{
     float: left;
-    width:660px;
+
 }
 #menu-item-432692  .nav-tit span{
     border-bottom:3px solid #eb9812;
 }
-#menu-item-432692 .cb-featured .cb-mask{
-    widht:480px;
-    height:240px;
-}
+
 .cb-recent.cb-recent-fw ul li{
     width:48%;
     float: left;
@@ -630,7 +672,6 @@ body {
 }
 .cb-featured{
     float: left;
-    height: 100%;
     border-right: 1px solid #333333;
     padding:0 30px 500px;
     margin-bottom: -500px;
