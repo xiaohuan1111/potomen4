@@ -55,11 +55,11 @@ $(document).ready(function () {
 
 
     //导航栏旁边的列表图片鼠标移入添加紫色涂层
-    // $(".cb-article").hover(function () {
-    //     $(this).children().children("img").css("opacity", ".5");
-    // }, function () {
-    //     $(this).children().children("img").css("opacity", "1");
-    // });
+    $(".cb-article").hover(function () {
+        $(this).children().children("img").css("opacity", ".5");
+    }, function () {
+        $(this).children().children("img").css("opacity", "1");
+    });
 
     $(".cb-recent .cb-mask").hover(function () {
         $(this).children().children("img").css("opacity", ".5");
@@ -123,6 +123,13 @@ $(document).ready(function () {
 
     })
 
+    //小屏幕下显示侧边栏
+    $("#nav-btn").click(function () {
+        $("#cb-outer-container").animate({"left":220},500);
+    })
+    $(".side-nav-close").click(function () {
+        $("#cb-outer-container").animate({"left":0},100);
+    })
 });
 
 

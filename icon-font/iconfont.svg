@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Tue Dec  6 22:06:51 2016
+Created by FontForge 20120731 at Fri Dec  9 13:15:23 2016
  By admin
 </metadata>
 <defs>
@@ -39,6 +39,8 @@ t9.5 -10.5t21.5 -4h37h67h81h80h64h36q23 0 34 12t2 38q-5 13 -9.5 30.5t-9.5 34.5q-
 d="M678 41l314 259l-314 259v-169h-646v-180h646v-169z" />
     <glyph glyph-name="add" unicode="&#xe600;" horiz-adv-x="1025" 
 d="M440 641q-16 0 -27 -11t-11 -27v-193h-193q-16 0 -27 -11t-11 -27v-144q0 -16 11 -27t27 -11h193v-193q0 -16 11 -27t27 -11h144q16 0 27 11t11 27v193h193q16 0 27 11t11 27v144q0 16 -11 27t-27 11h-193v193q0 16 -11 27t-27 11h-144z" />
+    <glyph glyph-name="shanchu" unicode="&#xe624;" 
+d="M689 207q-13 -13 -32 -13t-32 13l-290 290q-13 13 -13 32t13 32v0q13 13 32 13t32 -13l290 -290q13 -13 13 -32t-13 -32v0zM689 561q13 -13 13 -32t-13 -32l-290 -290q-13 -13 -32 -13t-32 13v0q-13 13 -13 32t13 32l290 290q13 13 32 13t32 -13v0z" />
     <glyph glyph-name="zhedie" unicode="&#xe6b3;" 
 d="M947 315h-870q-26 0 -44 20t-18 49t18 49t44 20h870q26 0 44 -20t18 -49t-18 -49t-44 -20zM947 660h-870q-26 0 -44 20.5t-18 49t18 48.5t44 20h870q26 0 44 -20t18 -48.5t-18 -49t-44 -20.5zM77 108h870q26 0 44 -20.5t18 -49t-18 -48.5t-44 -20h-870q-26 0 -44 20
 t-18 48.5t18 49t44 20.5z" />

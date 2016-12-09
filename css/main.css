@@ -8,8 +8,12 @@ body {
     font-weight: 200;
     color: gray;
     font-family: sans-serif;
-    background-color: #333333;
+    background-color: #2d2d2d;
 
+}
+#cb-outer-container{
+    position: relative;
+    background-color: #333333;
 }
 #cb-contain{
     position: relative;
@@ -17,7 +21,37 @@ body {
 .wrap {
     margin: 0 auto;
 }
-
+#side-nav{
+    position: absolute;
+    top:0;
+    left:-220px;
+    width:220px;
+    height:1000px;
+    color:#f7f7f7;
+    background-color: #2d2d2d;
+}
+#side-nav a{
+    text-decoration: none;
+}
+.side-nav-close{
+    line-height:19.5px;
+    padding:10px 20px 0 0;
+    display:block;
+    width:100%;
+    text-align: right;
+}
+#side-nav>ul>li>a{
+    display: block;
+    line-height: 19.5px;
+    padding:10px;
+    font-size: 13px;
+}
+#side-nav>ul>li>ul a{
+    display: block;
+    line-height:18px;
+    font-size: 12px;
+    padding:10px 10px 10px 25px;
+}
 /*自适应*/
 
 /*屏幕宽度小于 480px 手机设备*/
@@ -1063,20 +1097,23 @@ body {
 /*.cb-article.no-2,.cb-article.no-3{*/
     /*margin-left:30px;*/
 /*}*/
-/*!*footer*!*/
-/*.footer{*/
-    /*background-color: #272727;*/
-    /*border-top: 20px solid #333333;*/
-/*}*/
-/*.footer-widget{*/
-    /*background-color: #272727;*/
-    /*overflow: hidden;*/
-/*}*/
-/*.footer-left{*/
-    /*margin-bottom: -700px;*/
-    /*padding-bottom: 700px;*/
-    /*width: 100%;*/
-/*}*/
+
+
+
+/*footer*/
+.footer{
+    background-color: #272727;
+    border-top: 20px solid #333333;
+}
+.footer-widget{
+    background-color: #272727;
+    overflow: hidden;
+}
+.footer-left{
+    margin-bottom: -700px;
+    padding-bottom: 700px;
+    width: 100%;
+}
 @media only screen and (min-width: 768px){
     .footer-left {
         width: 33%;
