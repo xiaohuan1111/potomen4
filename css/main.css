@@ -1377,6 +1377,163 @@ body {
     }
 }
 
+
+/*主页第二部分 cb-section-b*/
+#cb-section-b{
+    float: left;
+    widht:780px;
+    padding:0 0 0 30px;
+}
+.cb-module-b{
+    width:360px;
+    float: left;
+}
+.cb-module-b:nth-child(odd){
+    margin:0 30px 50px 0;
+}
+.cb-dark{
+    background-color: #2d2d2d;
+    color:#f2f2f2;
+}
+.cb-light{
+    background-color: #f2f2f2;
+}
+
+.cb-dark .cb-module-header h2{
+    color:white;
+}
+.cb-mask{
+    overflow: hidden;
+}
+.cb-module-b .cb-article{
+    margin-bottom:20px;
+}
+.cb-module-b.cb-light .cb-article .cb-meta h2 a{
+    color:#4d4d4d;
+}
+.cb-module-b.cb-light .cb-article .cb-meta .cb-byline{
+    color:#4d4d4d;
+}
+.cb-module-b.cb-light .cb-article .cb-meta .cb-byline a{
+    color:#4d4d4d;
+}
+.cb-module-b .cb-article.cb-big .cb-meta h2{
+    margin-bottom:10px;
+}
+.cb-module-b .cb-article.cb-small{
+    padding: 0 15px;
+    margin:0 0 20px 0;
+}
+.cb-module-b .cb-article.cb-small .cb-mask{
+    position: relative;
+    float: left;
+}
+.cb-module-b .cb-article.cb-small .cb-meta{
+    width:100%;
+    padding:0 0 0 100px;
+}
+.cb-module-b .cb-article.cb-small .cb-meta h2 a{
+    font-size: 14px;
+    line-height:21px;
+    color:#f2f2f2;
+}
+
+@media only screen and (min-width: 1200px){
+    .cb-module-b .cb-article.cb-big .cb-meta{
+        padding:10px 15px;
+    }
+    .cb-module-b .cb-article.cb-big .cb-meta h2{
+        letter-spacing:1px;
+        font-size:21px;
+    }
+    .cb-module-b .cb-article.cb-big .cb-meta .cb-byline{
+        font-size: 12px;
+    }
+}
+
+/*主页第三部分 cb-siderbar-b*/
+#cb-sidebar-b{
+    float: left;
+    margin:0 30px;
+}
+#cb-loginwidthajax{
+    margin-bottom:30px;
+}
+#cb-loginwidthajax .cb-sidebar-widget-tit{
+    border-bottom: 3px solid transparent;
+    text-align: center;
+    color:#666666;
+}
+
+#cb-loginwidthajax .cb-login-module{
+    background-color: #272727;
+    padding:0 0 30px 0;
+}
+#cb-loginwidthajax .cb-login-module{
+    text-align:center;
+    color:#f7f7f7;
+}
+
+#cb-loginwidthajax .cb-login-module .cb-form-header{
+    border-bottom:3px solid transparent;
+    text-align: center;
+    line-height:21px;
+    color:#f7f7f7;
+}
+#cb-loginwidthajax .cb-form-body .cb-username i , #cb-loginwidthajax .cb-form-body .cb-password i{
+    width: 20%;
+    background: #242424;
+    color: #f2f2f2;
+    display: block;
+    height: 50px;
+    float: left;
+    line-height: 50px;
+    font-size: 24px;
+}
+#cb-loginwidthajax .cb-form-body .cb-username input , #cb-loginwidthajax .cb-form-body .cb-password input{
+    background: #2d2d2d;
+    border: none;
+    font-size: 14px;
+    padding: 10px 20px;
+    color: #f2f2f2;
+    height: 50px;
+    width: 80%;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+#cb-loginwidthajax .cb-form-body .cb-submit input{
+    width:100%;
+    background-color: #272727;
+    border:3px solid #2d2d2d;
+}
+
+@media only screen and (min-width:1200px){
+    .cb-sidebar{
+        width:360px;
+    }
+    #cb-loginwidthajax .cb-sidebar-widget-tit{
+        padding:14px 20px 15px;
+        margin-bottom:30px;
+        font-size:18px;
+    }
+    #cb-loginwidthajax .cb-login-module .cb-form-header{
+        padding:15px 0;
+        margin-bottom:30px;
+        font-size: 14px;
+    }
+    #cb-loginwidthajax .cb-form-body{
+        padding:0 30px;
+    }
+    #cb-loginwidthajax .cb-form-body .cb-username , #cb-loginwidthajax .cb-form-body .cb-password ,
+    #cb-loginwidthajax .cb-form-body .cb-submit{
+        width:100%;
+        margin:0 0 20px 0;
+    }
+    #cb-loginwidthajax .cb-form-body .cb-submit input{
+        padding:8px 30px;
+    }
+}
+
 /*footer*/
 .footer{
     background-color: #272727;

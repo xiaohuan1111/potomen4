@@ -31,22 +31,22 @@ $(document).ready(function () {
     });
 
     //cb-article 特色cb-featured 最近 中的图片鼠标移入有涂层效果 用鼠标移入降低图片透明度显示背景颜色实现
-    $(".cb-article").mouseenter(function () {
+    $(".cb-featured .cb-article").mouseenter(function () {
         $(this).find("img").css({"transform": "scale(1.1)", "transition": "1s", "opacity": ".5"});
     });
-    $(".cb-article").mouseleave(function () {
+    $(".cb-featured .cb-article").mouseleave(function () {
         $(this).find("img").css({"transform": "scale(1.0)", "transition": "1s", "opacity": "1"});
     });
 
 
     //导航栏旁边的列表图片鼠标移入添加紫色涂层
-    $(".cb-article").hover(function () {
-        $(this).children().children("img").css("opacity", ".5");
-    }, function () {
-        $(this).children().children("img").css("opacity", "1");
-    });
+    // $(".cb-article").hover(function () {
+    //     $(this).children().children("img").css("opacity", ".5");
+    // }, function () {
+    //     $(this).children().children("img").css("opacity", "1");
+    // });
 
-    $(".cb-recent .cb-mask").hover(function () {
+    $(".cb-mask").hover(function () {
         $(this).children().children("img").css("opacity", ".5");
     }, function () {
         $(this).children().children("img").css("opacity", "1");
