@@ -168,6 +168,21 @@ $(document).ready(function () {
             doslide3();
         },4000);
     })
+
+
+    //首页侧边栏 tab选项卡
+    $(".tabbarnav>li").click(function () {
+        $(".tabbarnav>li").removeClass("tabbarnav-on");
+        $(this).addClass("tabbarnav-on");
+        $(this).parent().siblings("div").css("display","none");
+        if($(this).index() == 0){
+            $(this).parent().siblings(".sidetab-recent").css("display","block");
+        }else if($(this).index() == 1){
+            $(this).parent().siblings(".tag-cloud").css("display","block");
+        }else{
+            $(this).parent().siblings(".sidetab-comments").css("display","block");
+        };
+    })
 });
 
 

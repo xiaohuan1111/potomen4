@@ -1362,7 +1362,7 @@ body {
 @media only screen and (min-width: 1200px) {
     .cb-module-a{
         width:100%;
-        margin:0 30px 30px 30px;
+        padding:0 30px 30px 30px;
     }
     .cb-module-a .cb-article{
         width:360px;
@@ -1389,6 +1389,7 @@ body {
 }
 #cb-section-b .cb-module-a{
     margin:0 0 30px 0;
+    padding:0;
 }
 
 .cb-module-b:nth-child(odd){
@@ -1541,6 +1542,37 @@ body {
 #cb-recent-post2{
     margin-bottom:30px;
 }
+#cb-sidetab{
+    margin-bottom:30px;
+}
+#cb-webo li{
+    float: left;
+    width:33.33333%;
+    paddding:0 23px;
+    text-align: center;
+}
+.weibo-head>a{
+    display: inline-block;
+    border:2px solid #a8de86;
+}
+.weibo-head>a>img{
+    padding:2px;
+    border:1px solid #ccc;
+}
+.weibo-attention{
+    padding:10px 0;
+    text-align: center;
+}
+.weibo-attention .btn{
+    padding:3px 20px;
+}
+.weibo-attention .btn-success{
+    background-color: rgb(100,190,64);
+}
+#cb-webo a{
+    color:#4D4D4D;
+    font-size: 12px;
+}
 .recent-article{
     padding:20px;
     background-color: #f2f2f2;
@@ -1552,9 +1584,7 @@ body {
     float: left;
 }
 .recent-article .cb-article .cb-meta{
-    position: relative;
     padding:0 0 0 100px;
-
 }
 .recent-article .cb-article .cb-meta .cb-byline{
     color:gray;
@@ -1577,30 +1607,50 @@ body {
     display: inline-block;
     padding: 14px 10px 15px 10px;
 }
+.tabbarnav .tabbarnav-on{
+    border-bottom:3px solid #eb9812;
+}
 .tabbarnav li a{
     color:#666666;
 }
-.sidebar-recent,.sidebar-comments{
+.tag-cloud{
+    display: none;
+}
+.sidetab-comments {
+    display: none;
+}
+.sidetab-comments{
     padding:20px;
     background-color: #f2f2f2;
 }
-
-.sidebar-comments li{
+.sidetab-recent .cb-mask{
+    float: left;
+}
+.sidetab-recent .cb-meta{
+    padding:0 0 0 100px;
+}
+.sidetab-recent .cb-meta a{
+    color:gray;
+}
+.sidetab-recent .cb-meta .cb-byline{
+    color:gray;
+}
+.sidetab-comments li{
     margin-bottom:20px;
 }
-.sidebar-comments .cb-avatar{
+.sidetab-comments .cb-avatar{
     width:60px;
     height:60px;
     float: left;
 }
-.sidebar-comments .cb-comment{
+.sidetab-comments .cb-comment{
     padding-left:80px;
     font-size: 12px;
 }
-.sidebar-comments .cb-comment a{
+.sidetab-comments .cb-comment a{
     color:gray;
 }
-.sidebar-comments .cb-comment .comment-info{
+.sidetab-comments .cb-comment .comment-info{
     font-size: 14px;
     color:#4d4d4d;
 }
