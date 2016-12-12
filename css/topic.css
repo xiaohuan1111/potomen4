@@ -1,0 +1,238 @@
+/*话题页面的css样式*/
+#topic-content{
+    width:100%;
+    background-color: white;
+}
+.topic-title{
+    padding:25px;
+    text-align: center;
+    border-bottom:3px solid transparent;
+    background-color: whitesmoke;
+}
+.topic-title h1{
+    color:#333333;
+    font-weight: 700;
+    line-height:48px;
+    font-size: 18px;
+    letter-spacing:1px;
+}
+.topic-title p{
+    color: #b3b3b3;
+    font-weight: 700;
+    padding: 0 10px;
+    line-height:21px;
+    letter-spacing:1px;
+}
+#routernav{
+    font-size: 12px;
+    color:gray;
+    margin:0;
+}
+#routernav > li + li:before{
+    padding: 0 5px;
+    color: #ccc;
+    content: " > ";
+}
+#routernav a{
+    font-size: 12px;
+    color:gray;
+}
+#topic-main{
+    float: left;
+}
+#topic-sidebar{
+    float: left;
+}
+.topic-buymeg{
+    margin-bottom:30px;
+}
+.topic-list li{
+    margin-bottom:30px;
+}
+.topic-list li:last-child{
+    margin-bottom:0;
+}
+.topic-article{
+    background-color: #f2f2f2;
+}
+.topic-article .cb-article .cb-mask{
+    position: relative;
+    float: left;
+}
+.topic-article .cb-article .cb-meta{
+    float: left;
+}
+.topic-article .cb-article .cb-meta h2 a{
+    color:#4d4d4d;
+    font-size:20px;
+    line-height:30px;
+}
+#topic-sidebar{
+    display: block;
+}
+#shewen-app{
+    margin-bottom:30px;
+}
+.page-navigation{
+   margin:20px 0 40px;
+}
+.page-navigation ul li{
+    display: inline-block;
+    float: left;
+    background-color: #f7f7f7;
+    border:3px solid #e9e9e9;
+}
+.page-navigation ul li.pagein{
+    background-color: #b3b3b3;
+    border-color: #b3b3b3;
+}
+.page-navigation ul li{
+    padding:10px 20px;
+    margin:0 10px 0 0;
+}
+.page-navigation ul li{
+    color:gray;
+    font-size: 16px;
+    line-height:24px;
+    letter-spacing: 1px;
+}
+.page-navigation ul li a{
+    color:gray;
+}
+@media only screen and (max-width: 1020px){
+    .page-navigation ul li{
+        padding:3px 10px;
+        margin-right:10px;
+    }
+    .page-navigation ul li{
+        color:gray;
+        font-size: 14px;
+        line-height:21px;
+        letter-spacing: 1px;
+    }
+    .page-navigation ul li i{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 479px){
+    .topic-title {
+        padding:15px;
+    }
+    .topic-title h1{
+        font-size: 18px;
+        line-height:27px;
+    }
+    .topic-title p{
+        font-size: 13px;
+    }
+    #topic-main{
+        margin:0 10px;
+        padding:20px 0 0 0;
+    }
+    .topic-article .cb-article .cb-meta{
+        padding:10px 20px 10px 10px;
+    }
+    .topic-article .cb-article .cb-meta h2 a{
+        font-size:13px;
+        line-height:19.5px;
+    }
+    .page-navigation ul li{
+        margin:0 10px 10px 0;
+    }
+}
+@media (min-width: 480px) and (max-width: 767px){
+    #topic-sidebar{
+        display: none;
+    }
+    .topic-title {
+        padding:15px;
+    }
+
+}
+@media only screen and (min-width: 481px){
+    .topic-title h1{
+        font-size: 18px;
+        line-height:27px;
+    }
+    .topic-title p{
+        font-size: 13px;
+    }
+    #topic-main{
+        margin:0 20px;
+        padding:20px 0 0 0;
+    }
+    #topic-sidebar{
+        margin:0 20px;
+        padding:20px 0 0 0;
+    }
+    .topic-article .cb-article .cb-mask{
+        width:33%;
+        margin-right:3%;
+    }
+    .topic-article .cb-article .cb-meta{
+        width:64%;
+        padding:10px 20px 10px 10px;
+    }
+    .topic-article .cb-article .cb-meta{
+        padding:10px 20px 10px 10px;
+    }
+}
+@media only screen and (min-width: 768px){
+    .topic-title h1{
+        font-size: 26px;
+    }
+    .topic-title p{
+        padding:0 20px;
+    }
+    #topic-main{
+        width:450px;
+        padding:20px 0 0 0;
+        margin:0 0 0 20px;
+    }
+
+    #topic-sidebar{
+        width:240px;
+        margin:0 20px;
+        padding:20px 0 0 0;
+    }
+    .topic-article .cb-article .cb-meta{
+        padding:10px 20px 10px 10px;
+    }
+}
+@media only screen and (min-width: 1020px){
+    #topic-main{
+        width:610px;
+        margin:0 0 0 30px;
+        padding:30px 0 0 0;
+    }
+    #topic-sidebar{
+        width:300px;
+        margin:0 30px;
+        padding:30px 0 0 0;
+    }
+    .topic-article .cb-article .cb-mask{
+        width:40%;
+        margin-right:3%;
+    }
+    .topic-article .cb-article .cb-meta{
+        width:57%;
+    }
+}
+@media only screen and (min-width: 1200px){
+    #topic-main{
+        width:750px;
+    }
+    #topic-sidebar{
+        width:360px;
+    }
+    .topic-title h1{
+        font-size: 32px;
+    }
+    .topic-title p{
+        padding:0 20px;
+    }
+    .topic-article .cb-article .cb-meta h2 a{
+        font-size:20px;
+        line-height:30px;
+    }
+}

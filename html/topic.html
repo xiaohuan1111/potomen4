@@ -6,13 +6,14 @@
     <link rel="shortcut icon" href="../img/favicon2.ico">
     <script src="../lib/jquery-3.1.1.min.js"></script>
     <script src="../lib/bootstrap.min.js"></script>
+    <script src="../lib/artTemplate.js"></script>
     <script src="../js/shuffing.js"></script>
     <link rel="stylesheet" href="../lib/bootstrap.min.css">
     <link rel="stylesheet" href="../icon-font/demo.css">
     <link rel="stylesheet" href="../icon-font/iconfont.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/huati.css">
+    <link rel="stylesheet" href="../css/topic.css">
     <link rel="stylesheet" href="../css/tool.css">
 </head>
 <body>
@@ -21,9 +22,9 @@
     <div id="side-nav">
         <a class="side-nav-close" href=""><i class="icon iconfont icon-shanchu" style="font-size: 30px;"></i></a>
         <ul>
-            <li><a href="">首页</a></li>
+            <li><a href="../main.html">首页</a></li>
             <li>
-                <a href="">话题</a>
+                <a href="#">话题</a>
                 <ul>
                     <li><a href="">展讯</a></li>
                     <li><a href="">事件</a></li>
@@ -93,12 +94,12 @@
         <!--导航栏-->
         <nav id="main-nav">
             <ul class="main-nav-list clearfix">
-                <li id="menu-item-301703" class="active">
-                    <a href="javascript:;">
+                <li id="menu-item-301703" >
+                    <a href="../main.html">
                         首页
                     </a>
                 </li>
-                <li id="menu-item-301702">
+                <li id="menu-item-301702" style="background-color: #634582;">
                     <a href="javascript:;">
                         话题
                         <i class="icon iconfont icon-add"></i>
@@ -1040,66 +1041,37 @@
                     </a>
                 </div>
                 <ul class="topic-list">
-                    <li>
-                        <div class="topic-article">
-                            <div class="cb-article clearfix">
-                                <div class="cb-mask" style="background-color:#634582;">
-                                    <a href="">
-                                        <img src="../img/屏幕快照-2016-12-08-下午1.08.35-300x200.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="cb-meta">
-                                    <h2><a href="">魅族发布魅蓝Note5 售899元起</a></h2>
-                                    <div class="cb-byline">
-                                        <div class="cb-auther">
-                                            <i class="icon iconfont icon-person"></i>
-                                            <a href="">直男</a>
-                                        </div>
-                                        <div class="cb-date">
-                                            <i class="icon iconfont icon-time"></i>
-                                            <time class="icon-item">2016-11-16</time>
-                                        </div>
-                                        <div class="cb-file">
-                                            <i class="icon iconfont icon-wenjianjia"></i>
-                                            <a href="">器材</a>,<a href="">装备</a>
-                                        </div>
+                    <script type="text/html" id="topicTemp">
+                        <li>
+                            <div class="topic-article">
+                                <div class="cb-article clearfix">
+                                    <div class="cb-mask" style="background-color:#634582;">
+                                        <a href="">
+                                            <img src="{{ img_url }}" alt="{{ img_alt }}">
+                                        </a>
                                     </div>
-                                    <div class="cb-experct">……</div>
+                                    <div class="cb-meta">
+                                        <h2><a href="">{{ h2 }}</a></h2>
+                                        <div class="cb-byline">
+                                            <div class="cb-auther">
+                                                <i class="icon iconfont icon-person"></i>
+                                                <a href="">{{ author }}</a>
+                                            </div>
+                                            <div class="cb-date">
+                                                <i class="icon iconfont icon-time"></i>
+                                                <time class="icon-item">{{ date }}</time>
+                                            </div>
+                                            <div class="cb-file">
+                                                <i class="icon iconfont icon-wenjianjia"></i>
+                                                <a href="">器材</a>,<a href="">装备</a>
+                                            </div>
+                                        </div>
+                                        <div class="cb-experct">{{ excerpt }}</div>
+                                    </div>
                                 </div>
                             </div>
-
-                        </div>
-                    </li>
-                    <li>
-                        <div class="topic-article">
-                            <div class="cb-article clearfix">
-                                <div class="cb-mask" style="background-color:#634582;">
-                                    <a href="">
-                                        <img src="../img/屏幕快照-2016-12-08-下午1.08.35-300x200.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="cb-meta">
-                                    <h2><a href="">魅族发布魅蓝Note5 售899元起</a></h2>
-                                    <div class="cb-byline">
-                                        <div class="cb-auther">
-                                            <i class="icon iconfont icon-person"></i>
-                                            <a href="">直男</a>
-                                        </div>
-                                        <div class="cb-date">
-                                            <i class="icon iconfont icon-time"></i>
-                                            <time class="icon-item">2016-11-16</time>
-                                        </div>
-                                        <div class="cb-file">
-                                            <i class="icon iconfont icon-wenjianjia"></i>
-                                            <a href="">器材</a>,<a href="">装备</a>
-                                        </div>
-                                    </div>
-                                    <div class="cb-experct">……</div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </li>
+                        </li>
+                    </script>
                 </ul>
                 <nav class="page-navigation">
                     <ul class="clearfix">

@@ -1,5 +1,23 @@
 $(document).ready(function () {
 
+    //话题页面数据加载
+    $.ajax({
+        "url": "../json/topic.json",
+        "datetype" : "JSON",
+        "success" : function(data){
+            $.each(data,function(i,val){
+                $(template("topicTemp",val)).appendTo(".topic-list");
+            });
+
+            $(".cb-mask").hover(function () {
+                $(this).children().children("img").css("opacity", ".5");
+            }, function () {
+                $(this).children().children("img").css("opacity", "1");
+            });
+        }
+    });
+
+
     //返回顶部
     $(window).scroll(function(){
         var sc=$(window).scrollTop();
@@ -183,7 +201,7 @@ $(document).ready(function () {
             $(this).parent().siblings(".sidetab-comments").css("display","block");
         };
     })
-    
+
 });
 
 
