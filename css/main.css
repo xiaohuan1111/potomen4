@@ -773,7 +773,14 @@ body {
     line-height:20px;
 }
 .cb-byline{
-    color:white;
+    letter-spacing: 1px;
+    color:#999999;
+}
+.cb-byline a{
+    color:#999999;
+}
+.cb-byline i{
+    margin-right:5px;
 }
 .cb-byline i.icon-person{
     font-size: 10px;
@@ -797,7 +804,6 @@ body {
 
 .cb-date{
     display: inline-block;
-    font-size: 12px;
     margin:0 7px 5px 0;
 }
 .cb-recent .cb-date{
@@ -805,7 +811,6 @@ body {
 }
 .cb-file{
     display: inline-block;
-    font-size: 12px;
     margin:0 7px 5px 0;
 }
 
@@ -1035,6 +1040,7 @@ body {
         padding:0 15px;
         margin:0 0 15px 0;
     }
+
     .cb-grid-5 .cb-featured-3 .cb-article-meta .cb-byline,.cb-grid-5 .cb-featured-4 .cb-article-meta .cb-byline,
     .cb-grid-5 .cb-featured-5 .cb-article-meta .cb-byline{
         display: none;
@@ -1764,6 +1770,7 @@ body {
     letter-spacing: 1px;
     font-weight: 700;
     float: left;
+    font-size: 16px;
     display: inline-block;
     padding: 14px 10px 15px 10px;
 }

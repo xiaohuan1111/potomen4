@@ -183,6 +183,7 @@ $(document).ready(function () {
             $(this).parent().siblings(".sidetab-comments").css("display","block");
         };
     })
+    
 });
 
 
