@@ -8,7 +8,6 @@ $(document).ready(function () {
             $.each(data,function(i,val){
                 $(template("topicTemp",val)).appendTo(".topic-list");
             });
-
             $(".cb-mask").hover(function () {
                 $(this).children().children("img").css("opacity", ".5");
             }, function () {
@@ -47,6 +46,25 @@ $(document).ready(function () {
                 $(this).children().children("img").css("opacity", ".5");
             }, function () {
                 $(this).children().children("img").css("opacity", "1");
+            });
+        }
+    });
+
+    //专题页面数据加载
+    $.ajax({
+        "url": "../json/subject.json",
+        "datetype" : "JSON",
+        "success" : function(data){
+            $.each(data,function(i,val){
+                $(template("subjectTemp",val)).appendTo("#subject-main");
+                if((i+1)%3 == 0){
+                    $(".subject-item").eq(i).addClass("subject-m0");
+                   // $(".subject-item").eq(i).css("margin-ritht",0);
+                    var oDiv = document.createElement('div');
+                    oDiv.className = "clearfix";
+                    var oSubject = document.getElementById('subject-main');
+                    oSubject.appendChild(oDiv);
+                }
             });
         }
     });

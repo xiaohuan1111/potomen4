@@ -4,7 +4,6 @@
     background-color: white;
 }
 .topic-title{
-    padding:25px;
     text-align: center;
     border-bottom:3px solid transparent;
     background-color: whitesmoke;
@@ -153,6 +152,9 @@
 
 }
 @media only screen and (min-width: 481px){
+    .topic-title{
+        padding:20px;
+    }
     .topic-title h1{
         font-size: 18px;
         line-height:27px;
@@ -181,8 +183,10 @@
     }
 }
 @media only screen and (min-width: 768px){
+
     .topic-title h1{
         font-size: 26px;
+        line-height:39px;
     }
     .topic-title p{
         padding:0 20px;
@@ -203,6 +207,9 @@
     }
 }
 @media only screen and (min-width: 1020px){
+    .topic-title{
+        padding:25px;
+    }
     #topic-main{
         width:610px;
         margin:0 0 0 30px;
