@@ -17,6 +17,40 @@ $(document).ready(function () {
         }
     });
 
+    //商店页面数据加载
+    $.ajax({
+        "url": "../json/store1.json",
+        "datetype" : "JSON",
+        "success" : function(data){
+            $.each(data,function(i,val){
+                $(template("storeTemp",val)).appendTo(".store-list");
+            });
+
+            $(".cb-mask").hover(function () {
+                $(this).children().children("img").css("opacity", ".5");
+            }, function () {
+                $(this).children().children("img").css("opacity", "1");
+            });
+        }
+    });
+
+    //商店页面数据加载
+    $.ajax({
+        "url": "../json/pic1.json",
+        "datetype" : "JSON",
+        "success" : function(data){
+            $.each(data,function(i,val){
+                $(template("picTemp",val)).appendTo(".pic-list");
+            });
+
+            $(".cb-mask").hover(function () {
+                $(this).children().children("img").css("opacity", ".5");
+            }, function () {
+                $(this).children().children("img").css("opacity", "1");
+            });
+        }
+    });
+
 
     //返回顶部
     $(window).scroll(function(){

@@ -48,10 +48,10 @@
 }
 /*****************************************************/
 /*商店页面同样使用话题页面的模版 所以样式写在一起不用另外添加css样式表*/
-.topic-list li , .store-list li{
+.topic-list li , .store-list li, .pic-list li{
     margin-bottom:30px;
 }
-.topic-list li:last-child , .store-list li:last-child{
+.topic-list li:last-child , .store-list li:last-child , .pic-list li:last-child{
     margin-bottom:0;
 }
 /***************************************************/
