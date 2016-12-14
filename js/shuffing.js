@@ -70,6 +70,7 @@ $(document).ready(function () {
     });
 
 
+
     //返回顶部
     $(window).scroll(function(){
         var sc=$(window).scrollTop();
