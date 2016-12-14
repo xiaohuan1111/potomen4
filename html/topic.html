@@ -1040,18 +1040,18 @@
                         <img src="../img/buymag_201404.png" alt="">
                     </a>
                 </div>
-                <ul class="topic-list">
+                <ul id="topic-art" class="topic-list">
                     <script type="text/html" id="topicTemp">
                         <li>
                             <div class="topic-article">
                                 <div class="cb-article clearfix">
                                     <div class="cb-mask" style="background-color:#634582;">
-                                        <a href="">
+                                        <a href="{{ img_src }}">
                                             <img src="{{ img_url }}" alt="{{ img_alt }}">
                                         </a>
                                     </div>
                                     <div class="cb-meta">
-                                        <h2><a href="">{{ h2 }}</a></h2>
+                                        <h2><a href="{{ img_src }}">{{ h2 }}</a></h2>
                                         <div class="cb-byline">
                                             <div class="cb-auther">
                                                 <i class="icon iconfont icon-person"></i>
@@ -1063,7 +1063,9 @@
                                             </div>
                                             <div class="cb-file">
                                                 <i class="icon iconfont icon-wenjianjia"></i>
-                                                <a href="">器材</a>,<a href="">装备</a>
+                                                <a class="topic-alink0" title="查看所有关于 {{ a0_text }}" href="{{ a0_url }}">{{ a0_text }}</a>
+                                                <a class="topic-alink1" title="查看所有关于 {{ a1_text }}" href="{{ a1_url }}">{{ a1_text }}</a>
+                                                <a href="{{ a2_url }}" title="查看所有关于 {{ a2_text }}">{{ a2_text }}</a>
                                             </div>
                                         </div>
                                         <div class="cb-experct">{{ excerpt }}</div>

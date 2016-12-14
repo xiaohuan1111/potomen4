@@ -920,12 +920,12 @@
                     <script type="text/html" id="deviceTemp">
                         <article  class="cb-article">
                             <div class="cb-mask" style="background:#689FCE;">
-                                <a href="">
+                                <a href="{{ img_src }}">
                                     <img src="{{ img_url }}" alt="{{ img_alt }}">
                                 </a>
                             </div>
                             <div class="cb-meta">
-                                <h2><a href="">{{ h2 }}</a></h2>
+                                <h2><a href="{{ img_src }}">{{ h2 }}</a></h2>
                                 <div class="cb-byline">
                                     <div class="cb-auther">
                                         <i class="icon iconfont icon-person"></i>
@@ -937,31 +937,17 @@
                                     </div>
                                     <div class="cb-file">
                                         <i class="icon iconfont icon-wenjianjia"></i>
-                                        <a href="" title="查看所有关于 快递">快递</a>,<a href="" title="查看所有关于 装备">装备</a>
+                                        <a class="device-alink0" href="{{ a0_url }}" title="查看所有关于 {{ a0_text }}">{{ a0_text }}</a>
+                                        <a class="device-alink1" href="{{ a1_url }}" title="查看所有关于 {{ a1_text }}">{{ a1_text }}</a>
+                                        <a href="{{ a2_url }}" title="查看所有关于 {{ a2_text }}">{{ a2_text }}</a>
                                     </div>
                                 </div>
-                                <div class="cb-experct">{{ text }}</div>
+                                <div class="cb-experct">{{ excerpt }}</div>
                             </div>
                         </article>
                     </script>
                     <script>
-                        //装备页面数据加载
-                        $.ajax({
-                            "url": "../json/device1.json",
-                            "datetype" : "JSON",
-                            "success" : function(data){
-                                $.each(data,function(i,val){
-                                    $(template("deviceTemp",val)).appendTo("#deviceart");
-                                    if((i+1)%2 == 0){
-                                        $("#deviceart .cb-article").eq(i).addClass("devicemr");
-                                        var oDeviceClear = document.createElement('div');
-                                        oDeviceClear.className = "clearfix";
-                                        var oDevice = document.getElementById('deviceart');
-                                        oDevice.appendChild(oDeviceClear);
-                                    }
-                                });
-                            }
-                        });
+
                     </script>
 
                 </div>

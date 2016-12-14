@@ -7,7 +7,14 @@ $(document).ready(function () {
         "success" : function(data){
             $.each(data,function(i,val){
                 $(template("topicTemp",val)).appendTo(".topic-list");
+                if(val.a0_url && val.a1_url){
+                    $(".topic-alink0 ").eq(i).after(",");
+                    if( val.a2_url){
+                        $(".topic-alink1 ").eq(i).after(",");
+                    }
+                }
             });
+            
             $(".cb-mask").hover(function () {
                 $(this).children().children("img").css("opacity", ".5");
             }, function () {
@@ -16,6 +23,37 @@ $(document).ready(function () {
         }
     });
 
+    //装备页面数据加载
+    $.ajax({
+        "url": "../json/device1.json",
+        "datetype" : "JSON",
+        "success" : function(data){
+            $.each(data,function(i,val){
+                $(template("deviceTemp",val)).appendTo("#deviceart");
+                if((i+1)%2 == 0){
+                    $("#deviceart .cb-article").eq(i).addClass("devicemr");
+                    var oDeviceClear = document.createElement('div');
+                    oDeviceClear.className = "clearfix";
+                    var oDevice = document.getElementById('deviceart');
+                    oDevice.appendChild(oDeviceClear);
+                };
+
+                if(val.a0_url && val.a1_url){
+                    $(".device-alink0 ").eq(i).after(",");
+                    if( val.a2_url){
+                        $(".device-alink1 ").eq(i).after(",");
+                    }
+                };
+
+                $(".cb-mask").hover(function () {
+                    $(this).children().children("img").css("opacity", ".5");
+                }, function () {
+                    $(this).children().children("img").css("opacity", "1");
+                });
+
+            });
+        }
+    });
     //商店页面数据加载
     $.ajax({
         "url": "../json/store1.json",
@@ -23,23 +61,15 @@ $(document).ready(function () {
         "success" : function(data){
             $.each(data,function(i,val){
                 $(template("storeTemp",val)).appendTo(".store-list");
-            });
-
-            $(".cb-mask").hover(function () {
-                $(this).children().children("img").css("opacity", ".5");
-            }, function () {
-                $(this).children().children("img").css("opacity", "1");
-            });
-        }
-    });
-
-    //商店页面数据加载
-    $.ajax({
-        "url": "../json/pic1.json",
-        "datetype" : "JSON",
-        "success" : function(data){
-            $.each(data,function(i,val){
-                $(template("picTemp",val)).appendTo(".pic-list");
+                if(val.a0_url && val.a1_url){
+                    $(".store_alink0 ").eq(i).after(",");
+                    if( val.a2_url){
+                        $(".store_alink1 ").eq(i).after(",");
+                        if(val.a3_url){
+                            $(".store_alink2 ").eq(i).after(",");
+                        }
+                    }
+                };
             });
 
             $(".cb-mask").hover(function () {
@@ -59,7 +89,7 @@ $(document).ready(function () {
                 $(template("subjectTemp",val)).appendTo("#subject-main");
                 if((i+1)%3 == 0){
                     $(".subject-item").eq(i).addClass("subject-m0");
-                   // $(".subject-item").eq(i).css("margin-ritht",0);
+                    // $(".subject-item").eq(i).css("margin-ritht",0);
                     var oDiv = document.createElement('div');
                     oDiv.className = "clearfix";
                     var oSubject = document.getElementById('subject-main');
@@ -68,6 +98,29 @@ $(document).ready(function () {
             });
         }
     });
+
+    //一图页面数据加载
+    $.ajax({
+        "url": "../json/pic1.json",
+        "datetype" : "JSON",
+        "success" : function(data){
+            $.each(data,function(i,val){
+                $(template("picTemp",val)).appendTo(".pic-list");
+                if(val.a0_url && val.a1_url){
+                    $(".pic_alink0").eq(i).after(",");
+                };
+
+            });
+            
+            $(".cb-mask").hover(function () {
+                $(this).children().children("img").css("opacity", ".5");
+            }, function () {
+                $(this).children().children("img").css("opacity", "1");
+            });
+        }
+    });
+
+
 
 
 
