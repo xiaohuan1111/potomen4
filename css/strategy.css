@@ -1,0 +1,114 @@
+div{
+    display: block;
+}
+.cb-blog-style-a, .cb-blog-style-d {
+    background: #f2f2f2;
+    margin: 0 0 30px 0;
+}
+.blog-style-d .cb-mask {
+    width: 100%;
+    margin: 0 0 0;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+.cb-blog-style-a .cb-meta, .cb-blog-style-d .cb-meta {
+    width: 100%;
+    float: left;
+    padding: 10px 20px 10px 10px;
+}
+.cb-blog-style-d .cb-mask, .cb-blog-style-d .cb-mask a img, .cb-blog-style-d .cb-meta {
+    width: 100%;
+}
+.cb-blog-style-d .cb-meta {
+    padding: 10px;
+}
+@media only screen and (min-width: 481px){
+    .cb-blog-style-d .cb-meta {
+        padding: 20px;
+    }
+}
+@media only screen and (min-width: 1020px){
+    .cb-blog-style-d .cb-meta {
+        padding: 20px;
+    }
+}
+h2, .h2 {
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+@media only screen and (min-width: 481px) {
+    h2, h2{
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    h2, h2{
+        margin: 0 0 10px;
+    }
+}
+@media only screen and (min-width: 1020px) {
+    h2, h2{
+        font-size: 21px;
+        margin: 0 0 20px;
+    }
+}
+h2, .h4 {
+    font-size: 12px;
+    margin: 0 0 5px;
+}
+@media only screen and (min-width: 481px) {
+    h2, h4{
+        font-size: 13px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    h2, h4{
+        margin: 0 0 5px;
+    }
+}
+@media only screen and (min-width: 1020px) {
+    h2, h4{
+        font-size: 14px;
+        margin: 0 0 10px;
+    }
+}
+.cb-blog-style-a .cb-meta h2, .cb-blog-style-d .cb-meta h2 {
+    margin: 0 0 5px 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.cb-blog-style-d .cb-meta h2 {
+    font-size: 18px;
+}
+@media only screen and (min-width: 481px){
+    .cb-blog-style-d .cb-meta h2 {
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 1020px){
+    .cb-blog-style-d .cb-meta h2 {
+        font-size: 26px;
+    }
+}
+.cb-blog-style-a .cb-meta h2 a, .cb-blog-style-d .cb-meta h2 a {
+    color: #4d4d4d;
+}
+@media only screen and (min-width: 1020px){
+    .cb-byline {
+        font-size: 11px;
+        margin: 0 0 5px 0;
+    }
+}
+.cb-byline .cb-author, .cb-byline .cb-date, .cb-byline .cb-category, .cb-byline .cb-comments {
+    display: inline-block;
+    margin: 0 7px 5px 0;
+}
+@media only screen and (min-width: 1020px){
+    .cb-byline .cb-author, .cb-byline .cb-date, .cb-byline .cb-category, .cb-byline .cb-comments {
+        margin: 0 10px 5px 0;
+    }
+}
+.cb-mask:hover img{
+    opacity: 0.6;
+}
